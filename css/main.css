@@ -1,0 +1,134 @@
+
+.wrapper {
+	margin:0px auto;
+	width: 1224px;
+}
+
+.block{
+	width: 100px;
+	height: 100px;
+}
+
+.red {
+	background-color: red;
+}
+
+.gray {
+		background-color: gray;
+
+}
+
+.clear {
+	clear:both;
+	overflow: hidden;
+}
+
+
+.box {
+	width: 100px;
+	height: 100px;
+	float: left;
+	padding: 1px;
+ 	perspective: 100px;
+}
+
+.fang {
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+	background-color: #2b2b2d;
+	text-align: left;
+	cursor: pointer;
+}
+
+.box:hover{
+	opacity: 0.8;
+}
+
+.fang_content{
+	padding-left: 5px;
+}
+
+.fang p{
+	padding-top: 24px;
+	font-size: 16px;
+}
+
+.line {
+	clear:both;
+	overflow: hidden;
+}
+
+#basic-modal-content {display:none;text-align: center;}
+
+/* Overlay */
+#simplemodal-overlay {background-color:#000;}
+
+/* Container */
+#simplemodal-container {height:260px; width:600px; color:#bbb; background-color:#333; border:4px solid #444; padding:12px;}
+#simplemodal-container .simplemodal-data {padding:8px;}
+#simplemodal-container code {background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:12px; margin-bottom:12px; padding:4px 6px 6px;}
+#simplemodal-container a {color:#ddd;}
+#simplemodal-container a.modalClose {background:url(../images/x.png) no-repeat transparent; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:5px; right:5px; cursor:pointer;}
+#simplemodal-container a.modalClose:hover {background:url(../images/x_hover.png) no-repeat transparent; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:5px; right:5px; cursor:pointer;}
+#simplemodal-container h3 {color:#84b8d9;}
+
+.modal_name{
+	font-size: 24px;
+	color:#fff;
+	margin-bottom: 10px;
+	letter-spacing: 1px;
+}
+
+.modal_info{
+	font-size: 14px;
+	color:#252727;
+	line-height: 24px;
+	letter-spacing: 1px;
+}
+
+#simplemodal-container .modal_info a{
+	color:#fff;
+	text-decoration: none;
+}
+#simplemodal-container .modal_info a:hover{
+	color:#000;
+}
+
+
+#simplemodal-container .modal_btn a{
+	position: relative;
+	margin: 5px 10px;
+	padding: 6px 25px 8px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 14px;
+	background-color: #252727;
+	border-radius: 5px;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+#simplemodal-container .modal_btn a:hover{
+	background-color:#fff;
+	color:#252727;
+
+}
+
+.closed{
+	background: url("../images/close.png") no-repeat center #2b2b2d;
+	height: 100px;
+	cursor:pointer;
+}
+
+.closed:hover{
+	background: url("../images/close_hover.png") no-repeat center #2b2b2d;
+	height: 100px;
+	cursor:pointer;
+}
+
