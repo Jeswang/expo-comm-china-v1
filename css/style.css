@@ -35,8 +35,13 @@ p{
     width:600px;
     border-radius: 5px;
     margin:0 auto;
-    padding:20px;
+    padding:20px 20px 0 20px;
     text-align: left;
+}
+
+.look_down{
+text-align:center;
+font-size:14px;
 }
 
 .dec_title{
@@ -81,6 +86,16 @@ p{
     font-size: 14px;
     color:#1f71b4;
 }
+
+.nav p a{
+    color:#1f71b4;
+    text-decoration: none;
+}
+
+.nav p a:hover{
+    opacity:0.8;
+}
+
 #set-8 {
     background: transparent;
     margin: 0 auto;
@@ -218,6 +233,7 @@ p{
     left: -425px;
     width: 300px;
     margin: -680px auto 10px auto;
+
     position: relative;
 }
 
@@ -225,6 +241,7 @@ p{
     text-align: right;
     width: 1224px;
     margin: 600px auto;
+
     right: 20px;
     position: relative;
 }
