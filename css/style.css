@@ -81,6 +81,16 @@ p{
     font-size: 14px;
     color:#1f71b4;
 }
+
+.nav p a{
+    color:#1f71b4;
+    text-decoration: none;
+}
+
+.nav p a:hover{
+    opacity:0.8;
+}
+
 #set-8 {
     background: transparent;
     margin: 0 auto;
