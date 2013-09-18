@@ -20,8 +20,8 @@
     function update_window_height()
     {
         var window_height = $(window).height();
-        var scroll_hight = 840;
-        if(window_height > 840){
+        var scroll_hight = 850;
+        if(window_height > 850){
             scroll_hight = window_height;
         }
         $(".section").css("height", scroll_hight);
@@ -31,6 +31,15 @@
         $(window).resize(function() {
             update_window_height();
         });
+
+        // scroll body to 0px on click
+        $('.ps p a').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800,'easeInOutExpo');
+            return false;
+        });
+
     });
 
     </script>
@@ -69,7 +78,7 @@
         <div class="section twill" id="section2">
 
             <script type="text/javascript" src="js/choose.js"></script>
-            <a href="http://36kr.com" target="_blank"><div class="logo"></div></a>
+            <a href="http://36kr.com" target="_blank" style="display:block;"><div class="logo"></div></a>
 
             <div class="wrapper clear">
                 <!-- modal content -->
@@ -86,7 +95,7 @@
                 </div>
             </div>
             <div class="nav ps">
-                <p>PS：投票要求并不严格，请自行把我节操 « <a href="#section1">投票介绍</a></p>
+                <p>PS：投票要求并不严格，请自行把我节操 « <a>投票介绍</a></p>
             </div>
         </div>
 
@@ -95,12 +104,12 @@
         <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
         <script type="text/javascript">
         $(function() {
-            $('div.nav a').bind('click',function(event){
+            $('.hi-icon-archive').bind('click',function(event){
                 var $anchor = $(this);
 
                 $('html, body').stop().animate({
-                    scrollTop: $(".logo").offset().top - 50
-                }, 1500,'easeInOutExpo');
+                    scrollTop: $(".logo").offset().top
+                }, 800,'easeInOutExpo');
                     /*
                     if you don't want to use the easing effects:
                     $('html, body').stop().animate({
