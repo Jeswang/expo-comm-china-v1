@@ -217,14 +217,14 @@ p{
     height: 47px;
     left: 20px;
     width: 1224px;
-    margin: 50px auto 10px auto;
+    margin: -680px auto 10px auto;
     position: relative;
 }
 
 .ps{
     text-align: right;
     width: 1224px;
-    margin: -40px auto;
+    margin: 600px auto;
     right: 20px;
     position: relative;
 }
