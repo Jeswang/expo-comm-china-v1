@@ -69,7 +69,8 @@ function hide_sub_buttons(num){
 //为 botton 设置点击函数
 function set_button_click(num){
     $(get_box_id_name(num)).unbind('click');
-
+    $(get_box_id_name(num)).parent().unbind("mouseenter");
+    $(get_box_id_name(num)).parent().unbind("mouseleave");
     $(get_box_id_name(num)).click(function(event) {
         event.preventDefault();
 
@@ -207,6 +208,14 @@ $(function() {
         var $one_block = $( "<div class=\"box\"><div class=\"fang gray\" id=\""+i+"\"></div></div>" );
         $( ".wrapper" ).append( $one_block);
     }
+
+    $('.box').mouseenter(function() {
+        $(this).fadeTo("normal", 0.8);
+    });
+    $('.box').mouseleave(function() {
+        $(this).fadeTo("normal", 1.0);
+    });
+
 
     for (var i=0; i<8; i++){
         set_button_html(i);

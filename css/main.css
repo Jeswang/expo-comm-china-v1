@@ -41,9 +41,7 @@
 	cursor: pointer;
 }
 
-.box:hover{
-	opacity: 0.8;
-}
+
 
 .fang_content{
 	padding-left: 5px;
