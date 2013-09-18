@@ -35,8 +35,13 @@ p{
     width:600px;
     border-radius: 5px;
     margin:0 auto;
-    padding:20px;
+    padding:20px 20px 0 20px;
     text-align: left;
+}
+
+.look_down{
+text-align:center;
+font-size:14px;
 }
 
 .dec_title{
@@ -226,16 +231,16 @@ p{
     background: url("../images/36krlogo.png") no-repeat scroll 0 0 transparent;
     height: 47px;
     left: 20px;
-    width:1224px;
-    margin:-80px auto;
+    width: 1224px;
+    margin: -80px auto;
     position: relative;
 }
 
 .ps{
     text-align: right;
-    width:1224px;
-    margin:-40px auto;
-    right:20px;
+    width: 1224px;
+    margin: -40px auto;
+    right: 20px;
     position: relative;
 }
 

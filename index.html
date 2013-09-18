@@ -16,96 +16,116 @@
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     <!--按钮脚本-->
     <script src="js/modernizr.custom.js"></script>
+    <script type="text/javascript">
+    function update_window_height()
+    {
+        var window_height = $(window).height();
+        var scroll_hight = 840;
+        if(window_height > 840){
+            scroll_hight = window_height;
+        }
+        $(".section").css("height", scroll_hight);
+    }
+    $(function() {
+        update_window_height();
+        $(window).resize(function() {
+            update_window_height();
+        });
+    });
+
+    </script>
 </head>
 <body>
-<div class="section black" id="section1">
-    <div class="content">
-        <div id="set-8">
-            <div class="nav hi-icon-wrap hi-icon-effect-8">
-                <p><a href="#section2">立即投票</a><a href="#section2" class="hi-icon hi-icon-archive"></a></p>
+    <div class="section black" id="section1">
+        <div class="content">
+            <div id="set-8">
+                <div class="nav hi-icon-wrap hi-icon-effect-8">
+                   <p><a href="#section2">立即投票</a><a href="#section2" class="hi-icon hi-icon-archive"></a></p>
+                </div>
             </div>
-        </div>
-        <div class="declare">
+            <div class="declare">
                 <div class="dec_title"></div>
                 <div class="pg">
                     <p>【活动介绍】：9月24日--9月28日，36氪携手 <a href="http://www.36kr.net/event/icexhibition" target="_blank">国际通信展</a> 共同为创业者聚集资源，1000平米创业者专区内聚集50家优秀创业团队，
                         大家可以到通信展现场36氪创业者专区了解他们的产品，也可以在投票页面了解简介，如果您喜欢他们，就为他们投上一票。</p>
+                    </div>
+                    <div class="pg">
+                        <p>【线上投票】：截至9月30日中午12点</p>
+                        <p>方式：为你喜欢的产品投上一票，同时投票信息会同步到新浪微博，为他们拉票；</p>
+                        <p>计数：线上的得票数直接计入得票总数；</p>
+                    </div>
+                    <div class="pg">
+                        <p>【线下投票】：国际通信展现场-中国国际展览中心 (北京静安庄)HALL2-36氪创业者专区</p>
+                        <p>方式：在36氪主展位咨询台领取投票贴纸，每天上午限50张，下午限50张，在49号展位您喜欢的产品后面贴上一票</p>
+                        <p>计数：现场的得票数将乘以两倍，计入得票总数：得票总数=线上得票+（线下得票*2）<span>投票要求并不严格，请各位创业者自己把握节操</span> 。</p>
+                    </div>
+                    <div class="pg">
+                        <p>【大剧透】：得票数前三名的产品将直接入围年底36氪颁奖礼的最终评选！</p>
+                        <div class="look_down"><a href="#section2"> ↓ </a></div>
+                    </div>
                 </div>
-                <div class="pg">
-                    <p>【线上投票】：截至9月30日中午12点</p>
-                    <p>方式：为你喜欢的产品投上一票，同时投票信息会同步到新浪微博，为他们拉票；</p>
-                    <p>计数：线上的得票数直接计入得票总数；</p>
-                </div>
-                <div class="pg">
-                    <p>【线下投票】：国际通信展现场-中国国际展览中心 (北京静安庄)HALL2-36氪创业者专区</p>
-                    <p>方式：在36氪主展位咨询台领取投票贴纸，每天上午限50张，下午限50张，在49号展位您喜欢的产品后面贴上一票</p>
-                    <p>计数：现场的得票数将乘以两倍，计入得票总数：得票总数=线上得票+（线下得票*2）<span>投票要求并不严格，请各位创业者自己把握节操</span> 。</p>
-                </div>
-                <div class="pg">
-                    <p>【大剧透】：得票数前三名的产品将直接入围年底36氪颁奖礼的最终评选！</p>
-                </div>
-        </div>
-    </div>
-</div>
-
-<div class="section twill" id="section2">
-
-    <script type="text/javascript" src="js/choose.js"></script>
-    <a href="http://36kr.com" target="_blank"><div class="logo"></div></a>
-    <div class="wrapper clear">
-        <!-- modal content -->
-        <div id="basic-modal-content">
-            <div class="modal_icon"></div>
-            <div class="modal_name"></div>
-            <div class="modal_info"></div>
-            <div class="modal_btn"><a href="#">投票</a></div>
+            </div>
         </div>
 
-        <!-- preload the images -->
-        <div style='display:none'>
-            <img src='images/x.png' alt='' />
+        <div class="section twill" id="section2">
+
+            <script type="text/javascript" src="js/choose.js"></script>
+            <a href="http://36kr.com" target="_blank"><div class="logo"></div></a>
+
+            <div class="wrapper clear">
+                <!-- modal content -->
+                <div id="basic-modal-content">
+                    <div class="modal_icon"></div>
+                    <div class="modal_name"></div>
+                    <div class="modal_info"></div>
+                    <div class="modal_btn"><a href="#">投票</a></div>
+                </div>
+
+                <!-- preload the images -->
+                <div style='display:none'>
+                    <img src='images/x.png' alt='' />
+                </div>
+            </div>
+            <div class="nav ps">
+                <p>PS：投票要求并不严格，请自行把我节操 « <a href="#section1">投票介绍</a></p>
+            </div>
         </div>
-    </div>
-    <div class="nav ps">
-        <p>PS：投票要求并不严格，请自行把我节操 « <a href="#section1">投票介绍</a></p>
-    </div>
-</div>
 
-<!-- The JavaScript -->
+        <!-- The JavaScript -->
 
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript">
-$(function() {
-    $('div.nav a').bind('click',function(event){
-        var $anchor = $(this);
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            $('div.nav a').bind('click',function(event){
+                var $anchor = $(this);
 
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500,'easeInOutExpo');
+                $('html, body').stop().animate({
+                    scrollTop: $(".logo").offset().top - 50
+                }, 1500,'easeInOutExpo');
                     /*
                     if you don't want to use the easing effects:
                     $('html, body').stop().animate({
                         scrollTop: $($anchor.attr('href')).offset().top
                     }, 1000);
-    */
-    event.preventDefault();
-});
-});
-</script>
+            */
+            event.preventDefault();
+        });
+        });
+        </script>
 
-<script type="text/javascript">
+        <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1268479-12']);
-  _gaq.push(['_setDomainName', '36kr.com']);
-  _gaq.push(['_trackPageview']);
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-1268479-12']);
+        _gaq.push(['_setDomainName', '36kr.com']);
+        _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
 
-</script>
-</body>
-</html>
+        </script>
+    </body>
+    </html>
