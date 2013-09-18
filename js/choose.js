@@ -149,6 +149,10 @@ function flip_sub_buttons(num){
             $(button_name).unbind("click");
             $(button_name).unbind("mouseenter");
             $(button_name).unbind("mouseleave");
+
+            enable_fade_action($(button_name).parent());
+
+
         }
         else
         {
@@ -161,6 +165,8 @@ function flip_sub_buttons(num){
 
             $(button_name).unbind("mouseenter");
             $(button_name).unbind("mouseleave");
+
+            disable_fade_action($(button_name).parent());
             $(button_name).mouseenter(set_icon(button_name, num, block))
             $(button_name).mouseleave(set_gray_icon(button_name, num, block));
 
@@ -174,6 +180,7 @@ function flip_sub_buttons(num){
 //将所有的 button 设置为开启
 function flip_all_button_on(){
     for (var i=0; i<8; i++){
+        disable_fade_action($(get_box_id_name(i)).parent());
         $(get_box_id_name(i)).flippy({
             color_target: "",
             direction: "right",
@@ -188,6 +195,8 @@ function flip_all_button_on(){
 function flip_all_button_off_except(num){
     for (var i=0; i<8; i++){
         if(i != num){
+            enable_fade_action($(get_box_id_name(i)).parent());
+
             $(get_box_id_name(i)).flippy({
                 color_target: "",
                 direction: "left",
@@ -200,6 +209,20 @@ function flip_all_button_off_except(num){
     }
 }
 
+function enable_fade_action(box){
+    box.mouseenter(function() {
+        $(this).fadeTo("fast", 0.8);
+    });
+    box.mouseleave(function() {
+        $(this).fadeTo("normal", 1.0);
+    });
+}
+
+function disable_fade_action(box){
+    box.unbind("mouseenter");
+    box.unbind("mouseleave");
+}
+
 //主函数
 $(function() {
     // 7 * 12 一共 84 个 box
@@ -209,12 +232,7 @@ $(function() {
         $( ".wrapper" ).append( $one_block);
     }
 
-    $('.box').mouseenter(function() {
-        $(this).fadeTo("normal", 0.8);
-    });
-    $('.box').mouseleave(function() {
-        $(this).fadeTo("normal", 1.0);
-    });
+    enable_fade_action($('.box'))
 
 
     for (var i=0; i<8; i++){
