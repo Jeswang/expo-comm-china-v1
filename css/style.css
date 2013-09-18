@@ -215,8 +215,8 @@ p{
 .logo{
     background: url("../images/36krlogo.png") no-repeat scroll 0 0 transparent;
     height: 47px;
-    left: 20px;
-    width: 1224px;
+    left: -425px;
+    width: 300px;
     margin: -680px auto 10px auto;
     position: relative;
 }
